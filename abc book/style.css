@@ -7,6 +7,7 @@
 :root {
     --grc: linear-gradient(to right, #1565C0, #b92b27);
     --grc2: linear-gradient(to right, #DBD65C, #5614B0);
+    --grc3: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
 }
 
 .container {
@@ -20,7 +21,7 @@
 
 nav {
     background: var(--grc);
-    height: 3rem;
+    min-height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,17 +34,24 @@ nav>ul {
     display: flex;
     gap: 23px;
     list-style: none;
+    flex-wrap: wrap;
 }
 
 nav>ul>li>a {
-    background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    background: var(--grc3);
     color: transparent;
     background-clip: text;
-    font-size: 25px;
-    border: 2px solid rgb(122, 109, 109);
+    font-size: 30px;
     cursor: pointer;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    box-shadow: 1px 1px 1px 1px black;
+    font-family: "Anton", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav>ul>li>a:hover {
+    background: black;
+    color: transparent;
+    background-clip: text;
 }
 
 main {
@@ -59,7 +67,7 @@ main {
     justify-content: center;
     align-items: center;
     background: var(--grc);
-    height: 15rem;
+    height: 15%;
     border-radius: 24px;
     width: 60%;
     box-shadow: 5px 5px 5px black;
@@ -80,4 +88,29 @@ main {
     top: 60%;
     right: 30px;
     cursor: pointer;
+}
+.goTop:hover{
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+
+@media screen and (max-width: 1080px) {
+    nav>ul {
+        line-height: 1px;
+        gap: 17px;
+        justify-content: center;
+    }
+
+    nav>ul>li>a {
+        font-size: 20px;
+    }
+
+    .card {
+        width: 90%;
+        height: 15rem;
+    }
+
+    .goTop {
+        right: 10px;
+    }
 }
