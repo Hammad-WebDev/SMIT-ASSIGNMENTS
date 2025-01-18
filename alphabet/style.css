@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grc: linear-gradient(to right, #1565C0, #b92b27);
+    --grc2: linear-gradient(to right, #DBD65C, #5614B0);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('assets/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: auto;
+}
+
+nav {
+    background: var(--grc);
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav>ul {
+    display: flex;
+    gap: 23px;
+    list-style: none;
+}
+
+nav>ul>li>a {
+    background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    color: transparent;
+    background-clip: text;
+    font-size: 25px;
+    border: 2px solid rgb(122, 109, 109);
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 17px;
+    margin: 17px 0px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--grc);
+    height: 15rem;
+    border-radius: 24px;
+    width: 60%;
+    box-shadow: 5px 5px 5px black;
+
+}
+
+.card:hover {
+    background: var(--grc2);
+}
+
+.card>img {
+    width: 50%;
+    height: 70%;
+}
+
+.goTop {
+    position: fixed;
+    top: 60%;
+    right: 30px;
+    cursor: pointer;
+}
