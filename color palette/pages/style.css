@@ -42,6 +42,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    height: calc(100dvh - 100px);
     height: calc(100% - 100px);
     padding: 0 10px;
     justify-content: center;
@@ -106,7 +107,11 @@ footer {
     nav>a>span, nav>span {
         display: none;
     }
-
+    nav>a{
+        position: absolute;
+        font-size: 25px;
+        left: 30px;
+    }
     nav {
         justify-content: center;
     }
